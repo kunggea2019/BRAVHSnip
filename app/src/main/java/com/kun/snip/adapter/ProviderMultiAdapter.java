@@ -9,6 +9,8 @@ import com.kun.snip.provider.BBean;
 import com.kun.snip.provider.BItemProvider;
 import com.kun.snip.provider.CBean;
 import com.kun.snip.provider.CItemProvider;
+import com.kun.snip.provider.DBean;
+import com.kun.snip.provider.DItemProvider;
 
 import java.util.List;
 
@@ -16,6 +18,7 @@ public class ProviderMultiAdapter extends BaseProviderMultiAdapter<ProviderMulti
     public static final int A = 0;
     public static final int B = 1;
     public static final int C = 2;
+    public static final int D = 3;
 
     public ProviderMultiAdapter(List<ProviderMultiEntity> data) {
         super(data);
@@ -24,6 +27,7 @@ public class ProviderMultiAdapter extends BaseProviderMultiAdapter<ProviderMulti
         addItemProvider(new AItemProvider());
         addItemProvider(new BItemProvider());
         addItemProvider(new CItemProvider());
+        addItemProvider(new DItemProvider());
     }
 
     @Override
@@ -35,8 +39,9 @@ public class ProviderMultiAdapter extends BaseProviderMultiAdapter<ProviderMulti
             return B;
         } else if (getItem(position) instanceof CBean) {
             return C;
+        } else if (getItem(position) instanceof DBean) {
+            return D;
         }
-
         return -1;
     }
 

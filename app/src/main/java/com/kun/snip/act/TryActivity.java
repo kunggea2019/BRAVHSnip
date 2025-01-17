@@ -13,6 +13,7 @@ import com.kun.snip.databinding.ActivityTryBinding;
 import com.kun.snip.provider.ABean;
 import com.kun.snip.provider.BBean;
 import com.kun.snip.provider.CBean;
+import com.kun.snip.provider.DBean;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,20 +40,25 @@ public class TryActivity extends AppCompatActivity {
         List<ProviderMultiEntity> list = new ArrayList<>();
 
         // 不同类型的beans
+        list.add(new DBean());
         list.add(new ABean());
         list.add(new BBean());
         list.add(new CBean());
 
         list.add(new ABean());
         list.add(new ABean());
+        list.add(new DBean());
         list.add(new BBean());
         list.add(new CBean());
         list.add(new BBean());
+        list.add(new DBean());
         list.add(new ABean());
         list.add(new CBean());
 
         list.add(new BBean());
         list.add(new BBean());
+        list.add(new DBean());
+        list.add(new DBean());
         list.add(new BBean());
         list.add(new BBean());
         list.add(new CBean());
